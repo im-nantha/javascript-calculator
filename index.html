@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <meta name="description" content="This calculator is used for minimum level calculations" />
+    <meta name="keywords" content="calculator, iphone calculator, calc website" />
+    <meta property="og:title" content="Calculator">
+    <meta property="og:description" content="This calculator is used for minimum level calculations">
+    <meta property="og:url" content="https://im-nantha.github.io/javascript-calculator/">
+    <meta property="og:image" content="https://im-nantha.github.io/javascript-calculator/assets/calc-logo-rounded.png">
+    <link rel="canonical" href="https://im-nantha.github.io/javascript-calculator/">
+    <link href="./assets/calc-logo-rounded.png" rel="shortcut icon" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+    <!-- less library included -->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <!-- jquery library included -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap icon cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="body-container">
+        <button id="theme-toggle"><i class="bi bi-moon"></i></button>
+        <section class="calculator">
+            <div class="calc-container">
+                <input id="display" readonly>
+                <div class="calc-keys">
+                    <button class="operator-btn grey-btn" onclick="clearDisplay()">AC</button>
+                    <button class="operator-btn grey-btn" onclick="appendToDisplay('%')">%</button>
+                    <button class="operator-btn grey-btn" onclick="appendToDisplay('**')">^</button>
+                    <button class="operator-btn yellow-btn" onclick="appendToDisplay('/')">/</button>
+                    <button class="operator-btn" onclick="appendToDisplay('7')">7</button>
+                    <button class="operator-btn" onclick="appendToDisplay('8')">8</button>
+                    <button class="operator-btn" onclick="appendToDisplay('9')">9</button>
+                    <button class="operator-btn yellow-btn" onclick="appendToDisplay('*')">x</button>
+                    <button class="operator-btn" onclick="appendToDisplay('4')">4</button>
+                    <button class="operator-btn" onclick="appendToDisplay('5')">5</button>
+                    <button class="operator-btn" onclick="appendToDisplay('6')">6</button>
+                    <button class="operator-btn yellow-btn" onclick="appendToDisplay('-')">-</button>
+                    <button class="operator-btn" onclick="appendToDisplay('1')">1</button>
+                    <button class="operator-btn" onclick="appendToDisplay('2')">2</button>
+                    <button class="operator-btn" onclick="appendToDisplay('3')">3</button>
+                    <button class="operator-btn yellow-btn" onclick="appendToDisplay('+')">+</button>
+                    <button class="operator-btn" onclick="appendToDisplay('0')">0</button>
+                    <button class="operator-btn" onclick="appendToDisplay('.')">.</button>
+                    <button class="operator-btn yellow-btn" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
